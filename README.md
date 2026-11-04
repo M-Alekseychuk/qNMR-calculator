@@ -1,4 +1,4 @@
-# Remix qNMR Calculator (v1.2)
+# qNMR Calculator
 
 > **Precision quantitative Nuclear Magnetic Resonance (qNMR) concentration and purity determination with automated Gaussian error propagation, standard reference library, and GxP-ready PDF reporting.**
 
@@ -11,7 +11,7 @@
 
 ## 🔬 Overview
 
-The **Remix qNMR Calculator** is a browser-native analytical chemistry application engineered for synthetic chemists, analytical research scientists, and QA/QC specialists in pharmaceutical and chemical laboratories. 
+The **qNMR Calculator** is a browser-native analytical chemistry application engineered for synthetic chemists, analytical research scientists, and QA/QC specialists in pharmaceutical and chemical laboratories. 
 
 It implements the internationally recognized internal standard 1H-qNMR method (Eurachem / ISO / USP / Ph. Eur. principles) to determine sample purity (mass fraction % w/w) and residual solvent/impurity content with comprehensive uncertainty propagation.
 

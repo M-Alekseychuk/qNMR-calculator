@@ -1,0 +1,45 @@
+[
+  {
+    "id": "3kih9bs",
+    "title": "Weighing in your internal standard",
+    "content": "Weigh roughly 10-20 mg of your internal standard (IC) of choice into an HPLC vial at the analytical balance. It’s not important to hit a specific number but it is very important to note down the exact weight you measured.",
+    "notes": [
+      {
+        "type": "tip",
+        "content": "For IC selection, check the “qNMR standards” tab and pick one which has a peak that is isolated from the rest of your compound signals."
+      },
+      {
+        "type": "info",
+        "content": "To get the best acuracy, prepare 3 samples and measure 3 qNMRs of your compound, then take the mean purity."
+      }
+    ]
+  },
+  {
+    "id": "llmj38t",
+    "title": "Weighing in your compound",
+    "content": "Weigh roughly 10-20 mg of your sample into the same HPLC vial at the analytical balance, and note down the exact weight again.",
+    "notes": []
+  },
+  {
+    "id": "itllj7f",
+    "title": "Measure your sample",
+    "content": "Dissolve the sample/IC mixture in roughly 0.6 mL of the deuterated solvent of your choice and make sure that you have a perfect solution. Transfer the solution into a NMR tube and measure the qNMR-experiment (12 min) at the NMR.",
+    "notes": [
+      {
+        "type": "tip",
+        "content": "If your sample doesn’t dissolve well, try using the sonicator or add more solvent. If it still doesn’t dissolve, change your deuterated solvent to something else (e.g. DMSO-D6)."
+      }
+    ]
+  },
+  {
+    "id": "6zqgdp3",
+    "title": "Analysis",
+    "content": "Open the NMR sample in your analysis software, set apodization to 0.125 (optionally remove Trapozoids in expert mode) and perform a baseline correction (Polynomal = 3).\nIntegrate an isolated peak of your sample and an isolated peak of your IC. Put the values into the software (also chose the correct internal standard from the drop down menu and put in the molecular weight of your sample), click analyse (which gives you your purity), go to the report tab and attach a PDF of your qNMR spectrum, and click generate repott for a full report.",
+    "notes": [
+      {
+        "type": "tip",
+        "content": "IC peak and sample peak should be close to each other (e.g. if you're looking at an aromatic peak, use an IC with an aromatic proton; if you're looking at a methoxy group, try using an IC with an methoxy group.)"
+      }
+    ]
+  }
+]

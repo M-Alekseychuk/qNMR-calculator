@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BookOpen, CheckCircle2, AlertCircle, Edit2, Save, Plus, Trash2, Info, FileText, Download } from 'lucide-react';
+import { BookOpen, CheckCircle2, AlertCircle, Edit2, Save, Plus, Trash2, Info, FileText, Download, RotateCcw } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { saveAs } from 'file-saver';
 
@@ -24,6 +24,10 @@ const DEFAULT_STEPS: Step[] = [
       {
         type: "tip",
         content: "For IC selection, check the “qNMR standards” tab and pick one which has a peak that is isolated from the rest of your compound signals."
+      },
+      {
+        type: "info",
+        content: "To get the best acuracy, prepare 3 samples and measure 3 qNMRs of your compound, then take the mean purity."
       }
     ]
   },
@@ -47,8 +51,13 @@ const DEFAULT_STEPS: Step[] = [
   {
     id: "6zqgdp3",
     title: "Analysis",
-    content: "Integrate an isolated peak of your sample and an isolated peak of your IC. Put the values into the software (also chose the correct internal standard from the drop down menu and put in the molecular weight of your sample), click analyse (which gives you your purity) and go to the report tab for a full report.",
-    notes: []
+    content: "Open the NMR sample in your analysis software, set apodization to 0.125 (optionally remove Trapozoids in expert mode) and perform a baseline correction (Polynomal = 3).\nIntegrate an isolated peak of your sample and an isolated peak of your IC. Put the values into the software (also chose the correct internal standard from the drop down menu and put in the molecular weight of your sample), click analyse (which gives you your purity), go to the report tab and attach a PDF of your qNMR spectrum, and click generate repott for a full report.",
+    notes: [
+      {
+        type: "tip",
+        content: "IC peak and sample peak should be close to each other (e.g. if you're looking at an aromatic peak, use an IC with an aromatic proton; if you're looking at a methoxy group, try using an IC with an methoxy group.)"
+      }
+    ]
   }
 ];
 
@@ -57,7 +66,7 @@ export default function StepGuide() {
   const [isEditing, setIsEditing] = useState(false);
 
   useEffect(() => {
-    const saved = localStorage.getItem('qnmr_guide_steps_v3');
+    const saved = localStorage.getItem('qnmr_guide_steps_v4');
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
@@ -77,7 +86,7 @@ export default function StepGuide() {
   const saveSteps = (newSteps: Step[]) => {
     const validSteps = Array.isArray(newSteps) ? newSteps : DEFAULT_STEPS;
     setSteps(validSteps);
-    localStorage.setItem('qnmr_guide_steps_v3', JSON.stringify(validSteps));
+    localStorage.setItem('qnmr_guide_steps_v4', JSON.stringify(validSteps));
   };
 
   const addStep = () => {
@@ -236,6 +245,15 @@ export default function StepGuide() {
           >
             <Download className="w-4 h-4" /> PDF
           </button>
+          {isEditing && (
+            <button
+              onClick={() => saveSteps(DEFAULT_STEPS)}
+              className="flex items-center gap-1.5 px-3 py-2 rounded-md text-sm font-medium bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-600 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors shadow-sm cursor-pointer"
+              title="Reset guide to software standard"
+            >
+              <RotateCcw className="w-4 h-4" /> Reset
+            </button>
+          )}
           <button
             onClick={() => setIsEditing(!isEditing)}
             className={cn(

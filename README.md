@@ -1,6 +1,6 @@
 # qNMR Calculator
 
-> **Precision quantitative Nuclear Magnetic Resonance (qNMR) concentration and purity determination with automated Gaussian error propagation, standard reference library, and GxP-ready PDF reporting.**
+> **Precision quantitative Nuclear Magnetic Resonance (qNMR) concentration and purity determination with automated Gaussian error propagation, standard reference library, and PDF reporting.**
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-19.0-61dafb.svg)](https://react.dev/)
@@ -11,17 +11,17 @@
 
 ## 🔬 Overview
 
-The **qNMR Calculator** is a browser-native analytical chemistry application engineered for synthetic chemists, analytical research scientists, and QA/QC specialists in pharmaceutical and chemical laboratories. 
+The **qNMR Calculator** is an analytical chemistry application engineered for both synthetic chemists and analytical research scientists in pharmaceutical and chemical laboratories. 
 
 It implements the internationally recognized internal standard 1H-qNMR method (Eurachem / ISO / USP / Ph. Eur. principles) to determine sample purity (mass fraction % w/w) and residual solvent/impurity content with comprehensive uncertainty propagation.
 
 ### Core Capabilities
 
 - **Primary & Multi-Analyte Purity Assay**: Calculate the purity of the primary target analyte alongside multiple secondary analytes or residual solvent impurities (e.g., residual EtOH, EtOAc, DCM, DMSO).
-- **Automated Error Propagation**: Full Gaussian uncertainty propagation calculating absolute error (e.g., $\pm 0.45\%$) and relative percentage error based on balance uncertainties, standard purity certificates, and signal integration tolerances.
+- **Automated Error Propagation**: Full Gaussian uncertainty propagation calculating absolute error (e.g., $\pm 0.45\%$) and relative percentage error based on balance uncertainties, internal standard purity, and signal integration tolerances.
 - **qNMR Standards Library**: Curated database of primary and secondary reference standards (e.g., 1,3,5-Trimethoxybenzene, Dimethyl sulfone, Duroquinone, Maleic acid) with chemical shifts ($\delta$ ppm in $\text{CDCl}_3$ and $\text{DMSO-}d_6$), molecular weights, and signal multiplicities. Includes custom user standard addition, editing, and JSON backup/restore.
-- **Standard Operating Procedure (SOP) Step Guide**: Interactive, editable protocol outlining weighing, dissolution, NMR acquisition parameters (12 min, $d_1 \ge 5 T_1$, 90°/30° flip angle), and spectral processing.
-- **Audit-Ready PDF & Print Reports**: Generates compressed, publication-quality PDF reports with company logo branding, sample metadata, batch numbers, analytical parameters, vector formulas, and results tables with uncertainty intervals.
+- **Standard Operating Procedure (SOP) / Step-by-Step Guide**: Interactive, editable protocol outlining weighing, dissolution, NMR acquisition parameters (12 min, $d_1 \ge 5 T_1$, 90°/30° flip angle), and spectral processing.
+- **PDF Report**: Generates PDF reports with company logo branding, sample metadata, batch numbers, analytical parameters, vector formulas, and results tables with uncertainty intervals.
 - **Session History & Benchmarking**: Save, recall, annotate, and compare multiple weighing runs or replicates with local persistence.
 
 ---
@@ -46,8 +46,6 @@ Following our core documentation establishment, documentation is organized into 
 │   └── task/
 │       ├── roadmap.md             # Multi-nuclear (19F/31P/13C), FID parser & cloud roadmap
 │       └── active-tasks.md        # Current sprint backlog & pending enhancements
-├── AGENTS.md                      # Operational guide and guidelines for AI coding agents
-├── CLAUDE.md                      # Quick-reference developer cheat sheet & common commands
 └── README.md                      # This project overview
 ```
 
@@ -61,6 +59,10 @@ Following our core documentation establishment, documentation is organized into 
 - **Package Manager**: `npm`, `pnpm`, or `bun`
 
 ### Installation & Run
+
+Either install latest version release (.exe)
+
+or
 
 ```bash
 # 1. Install dependencies
@@ -101,10 +103,10 @@ For detailed derivations and error contribution breakdowns, see [`docs/spec/calc
 
 ## 🔒 Offline & Data Privacy
 
-This application runs **100% client-side** in your browser. No chemical structures, compound names, analytical batches, masses, or spectral integrals are ever sent to external servers or third-party cloud services. Local calculations and saved sessions reside solely in your browser's encrypted `localStorage`.
+This application runs **100% locally**. No compound names, analytical batches, masses, or spectral integrals are ever sent to external servers or third-party cloud services. Local calculations and saved sessions reside solely on youe device.
 
 ---
 
 ## 📄 License
 
-Proprietary / Internal Laboratory Application. All rights reserved.
+GNU General Public License (GPL-3.0; https://www.gnu.org/licenses/gpl-3.0.html)

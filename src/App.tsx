@@ -182,7 +182,7 @@ export default function App() {
                   id="app-version-badge" 
                   className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-100/70 text-blue-700 border border-blue-200/90 shadow-2xs dark:bg-blue-950/60 dark:text-blue-300 dark:border-blue-800/80"
                 >
-                  v1.2
+                  v.1.0
                 </span>
               </div>
             </div>

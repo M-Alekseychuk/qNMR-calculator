@@ -33,20 +33,45 @@ Following our core documentation establishment, documentation is organized into 
 ```text
 ├── docs/
 │   ├── context/
+│   │   ├── domain-qnmr.md         # Chemistry principles & internal standard method
 │   │   ├── system-overview.md     # Architectural blueprint, component tree & state flow
-│   │   ├── domain-qnmr.md         # Chemistry principles, internal standard method & acquisition parameters
 │   │   └── tech-stack.md          # Runtime, frameworks, libraries & styling guidelines
 │   ├── memory/
 │   │   ├── decisions-log.md       # Architectural Decision Records (ADRs)
-│   │   └── lessons-learned.md     # Pitfalls, optimization breakthroughs (e.g. PDF compression)
+│   │   └── lessons-learned.md     # Engineering insights & PDF compression optimization
 │   ├── spec/
 │   │   ├── calculation-engine.md  # Mathematical equations & error propagation derivations
 │   │   ├── standards-database.md  # Standard compounds schema & chemical shift database
 │   │   └── reporting-export.md    # Report formatting, PDF generation & styling rules
-│   └── task/
-│       ├── roadmap.md             # Multi-nuclear (19F/31P/13C), FID parser & cloud roadmap
-│       └── active-tasks.md        # Current sprint backlog & pending enhancements
-└── README.md                      # This project overview
+│   ├── task/
+│   │   ├── roadmap.md             # Multi-nuclear (19F/31P/13C), FID parser & cloud roadmap
+│   │   └── active-tasks.md        # Current backlog & pending enhancements
+│   └── PR_CORE_DOCS.md            # Pull request summary for core-doc establishment
+├── public/
+│   ├── assets/aistudio/           # Default logos, reference guides & attachments
+│   └── default_logo.png           # Fallback application branding
+├── src/
+│   ├── components/
+│   │   ├── Calculator.tsx         # Main qNMR calculation engine & analyte table
+│   │   ├── CalculationHistory.tsx # Saved measurements, sessions & replicate statistics
+│   │   ├── StandardsTable.tsx     # Reference standards database & custom standard editor
+│   │   ├── StepGuide.tsx          # Step-by-step SOP guide with standard reset & export
+│   │   ├── ReportTemplate.tsx     # Monospace raw text report & PDF exporter
+│   │   ├── LogoModal.tsx          # Custom logo uploader, scaler & persistent storage
+│   │   └── ConfirmModal.tsx       # Confirmation dialogs for non-destructive workflows
+│   ├── lib/
+│   │   ├── logoBase64.ts          # Default OPCP organization logo base64 asset
+│   │   ├── qnmrMath.ts            # Purity calculations & Gaussian uncertainty formulas
+│   │   └── utils.ts               # Class merging utilities (tailwind-merge / clsx)
+│   ├── types.ts                   # Core TypeScript domain models (Compound, QNMRResult, etc.)
+│   ├── App.tsx                    # Main navigation shell, header, and tab router
+│   ├── index.css                  # Global Tailwind CSS imports & base styles
+│   └── main.tsx                   # Application bootstrap & React 19 root
+├── index.html                     # HTML5 entry point & metadata
+├── metadata.json                  # AI Studio applet capabilities & permissions
+├── package.json                   # Dependencies, scripts, and build configuration
+├── tsconfig.json                  # TypeScript compiler configuration
+└── vite.config.ts                 # Vite bundler, Tailwind plugin & server configuration
 ```
 
 ---

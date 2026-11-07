@@ -2,6 +2,8 @@
 
 > **Precision quantitative Nuclear Magnetic Resonance (qNMR) concentration and purity determination with automated Gaussian error propagation, standard reference library, and PDF reporting.**
 
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-v1.0.0-blue.svg)](package.json)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue.svg)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-19.0-61dafb.svg)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-6.2-646cff.svg)](https://vitejs.dev/)

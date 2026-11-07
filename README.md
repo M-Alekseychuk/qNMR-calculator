@@ -130,7 +130,7 @@ For detailed derivations and error contribution breakdowns, see [`docs/spec/calc
 
 ## 🔒 Offline & Data Privacy
 
-This application runs **100% locally**. No compound names, analytical batches, masses, or spectral integrals are ever sent to external servers or third-party cloud services. Local calculations and saved sessions reside solely on youe device.
+This application runs **100% locally**. Nothing is ever sent to external servers or third-party cloud services. Local calculations and saved sessions reside solely on youe device.
 
 ---
 
